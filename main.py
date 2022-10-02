@@ -11,6 +11,12 @@ def parcours_collection(collection):
         print(collection[i], "\n")
 
 
+# [Question 13] -> Création d'une fonction makeBackUp
+def make_back_up(films):
+    for i in range(0, len(films)):
+        print(str(films[i].get_sortie()) + " - " + films[i].get_titre() + " - " + str(films[i].get_recette()))
+
+
 if __name__ == '__main__':
     # [Question 2] -> Code permettant la création de films
     film1 = Film("Star Wars, épisode IV : Un nouvel espoir", 1977, "Trilogie originale", 15000000, 43000000)
@@ -44,3 +50,11 @@ if __name__ == '__main__':
     print(liste_de_films[1].nb_personnages())
     print(liste_de_films[0].calcul_benefice())
     print(liste_de_films[1].is_before(2021))
+
+    # [Question 12] -> Tri des acteurs
+    liste_de_films[0].tri()
+    print("BELLOW ->")
+    print(liste_de_films[0])
+
+    # [Question 13] -> Test de la fonction MakeBackUp
+    make_back_up(liste_de_films)
